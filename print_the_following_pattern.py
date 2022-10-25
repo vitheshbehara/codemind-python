@@ -1,5 +1,16 @@
+def fun(x):
+    x=list(x)
+    s=""
+    for i in x:
+        s+=i
+    return s
 n=int(input())
-for i in range(n+1,1,-1):
-    for j in range(1,i):
-        print(j,end="")
-    print()
+s=""
+for i in range(n):
+    l=[]
+    for j in range(n):
+        if i==j:
+            l.append("0")
+        else:
+            l.append("x")
+    print(fun(l))
